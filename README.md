@@ -44,15 +44,19 @@ While the system is running, it records player's cash and owned properties in tx
 
 In the form of:
 
-```
-{r engine='bash', comment=''}
-cat CashTransaction_Player 1.csv
-```
-```
-{r engine='bash', comment=''}
-cat Property_Player 1.csv
-```
+Amount |  Balance
+------------- | -------------
+Init | 1000
+-200 | 800 
+-200 | 600 
+-300 | 300 
+200| 500
 
+Table Header 
+------------- 
+Lot x 1 
+Utility x 2
+Railroad x 1
 
 That is, every time the player successfully purchases a square, the logger should automatically rewrite the files.
 
