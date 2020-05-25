@@ -14,7 +14,7 @@ public class OwnedSquareObserver extends PlayerObserver{
 	private String fileName;
 	private ArrayList<String> assets;
 	public OwnedSquareObserver(Player player) {
-        fileName = "OwnedSquares_" + player.getName() + ".txt" ;
+        fileName = "Property_" + player.getName() + ".txt" ;
         player.addObserver(this);
     }
 
