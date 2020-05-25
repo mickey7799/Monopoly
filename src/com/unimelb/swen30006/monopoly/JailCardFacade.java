@@ -7,7 +7,7 @@ import com.unimelb.swen30006.monopoly.card.GoToJailCard;
 import com.unimelb.swen30006.monopoly.card.JailCard;
 import com.unimelb.swen30006.monopoly.card.JailExcemptionCard;
 import com.unimelb.swen30006.monopoly.card.PayJailFeeCard;
-import com.unimelb.swen30006.monopoly.square.Square;
+
 
 public class JailCardFacade {
 	private ArrayList<JailCard> jailCardList;
@@ -29,10 +29,11 @@ public class JailCardFacade {
 		return jailCardFacade;
 	}
 	
-	public void pickCard(Player p, Square location){
+	public JailCard pickCard(){
+		System.out.println("Draw a jail card for a luck...");
         Random random = new Random();
         int index = random.nextInt(5);
-        jailCardList.get(index).action(p,location);
+        return jailCardList.get(index);
     }
 	
 	

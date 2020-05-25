@@ -8,6 +8,7 @@ package com.unimelb.swen30006.monopoly;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.unimelb.swen30006.monopoly.observer.SubjectBase;
 import com.unimelb.swen30006.monopoly.square.PropertySquare;
 import com.unimelb.swen30006.monopoly.square.RRSquare;
 import com.unimelb.swen30006.monopoly.square.Square;
@@ -24,7 +25,7 @@ import com.unimelb.swen30006.monopoly.square.Square;
  * @since 	2016-07-19
  *
  */
-public class Player{
+public class Player extends SubjectBase{
 	public static final int INIT_CASH = 1000;
 	
 	private String name;
@@ -68,6 +69,7 @@ public class Player{
 			}
 			
 			System.out.println(getName()+" buy "+property.getName()+" for $"+price);
+			publishEvent("attempPurchase", property.getName());
 		}
 	}
 	
@@ -93,10 +95,12 @@ public class Player{
 	
 	public void addCash(int c){
 		cash+=c;
+		publishEvent("addCash", Integer.toString(c));
 	}
 	
 	public void reduceCash(int c){
 		cash-=c;
+		publishEvent("reduceCash", Integer.toString(c));
 	}
 	
 	public void addNetWorth(int c){
@@ -110,4 +114,8 @@ public class Player{
 	public int getRRCount(){
 		return RRCount;
 	}
+
+
+	
+	
 }

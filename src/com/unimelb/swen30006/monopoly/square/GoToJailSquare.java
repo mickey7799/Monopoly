@@ -1,5 +1,6 @@
 package com.unimelb.swen30006.monopoly.square;
 
+import com.unimelb.swen30006.monopoly.JailCardFacade;
 import com.unimelb.swen30006.monopoly.Player;
 /**
  * This class is modified for Workshop 9 exercises for SWEN30006 Software Design and Modelling at the University of Melbourne
@@ -31,8 +32,9 @@ public class GoToJailSquare extends Square {
 
 	@Override
 	public void landedOn(Player p) {
-		p.setLocation(jail);
-		System.out.println(p.getName()+" Goes to jail!");
+		JailCardFacade.getInstance().pickCard().action(p, jail);
+//		p.setLocation(jail);
+//		System.out.println(p.getName()+" Goes to jail!");
 	}
 
 }
