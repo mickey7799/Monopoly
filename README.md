@@ -44,10 +44,12 @@ While the system is running, it records player's cash and owned properties in tx
 
 In the form of:
 
-```{r engine='bash', comment=''}
+```
+{r engine='bash', comment=''}
 cat CashTransaction_Player 1.csv
 ```
-```{r engine='bash', comment=''}
+```
+{r engine='bash', comment=''}
 cat Property_Player 1.csv
 ```
 
