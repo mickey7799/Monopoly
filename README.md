@@ -39,11 +39,13 @@ The player will randomly draw 1 card from the card deck and if the card is:
 While the system is running, it records player's cash and owned properties in txt file per player:
 
 `CashTransaction_{player name}.txt`
+
 `Property_{player name}.txt`
 
-In the form of
-![](/.txt)
-![](/.txt)
+In the form of:
+
+![](/CashTransaction_Player 1.txt)
+![](/Property_Player 1.txt)
 
 That is, every time the player successfully purchases a square, the logger should automatically rewrite the files.
 
