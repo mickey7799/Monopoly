@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
+
+import com.unimelb.swen30006.monopoly.observer.CashTransactionObserver;
+import com.unimelb.swen30006.monopoly.observer.OwnedSquareObserver;
 /**
  * This class is modified for Workshop 9 exercises for SWEN30006 Software Design and Modelling at the University of Melbourne
  * @author Patanamon Thongtanunam
@@ -37,7 +40,8 @@ public class MonopolyGame {
 		for(int i = 0; i < numOfPlayers;i++){
 			Player p;
 			p = new Player("Player " + (i+1), board);
-
+			new CashTransactionObserver(p);
+			new OwnedSquareObserver(p);
 			players.add(p);
 		}
 	}
