@@ -36,9 +36,16 @@ The player will randomly draw 1 card from the card deck and if the card is:
 
 
 #### 2. Logging Player’s Assets: 
-While the system is running, it records player's cash and owned properties in a txt file. 
+While the system is running, it records player's cash and owned properties in txt file per player:
 
-That is, every time the player successfully purchases a square, the logger should automatically rewrite the whole file.
+`CashTransaction_{player name}.txt`
+`Property_{player name}.txt`
+
+In the form of
+![](/.txt)
+![](/.txt)
+
+That is, every time the player successfully purchases a square, the logger should automatically rewrite the files.
 
 
 **Design pattern: use observer pattern to ensure the logging engine have low coupling with the current Monopoly system.**
