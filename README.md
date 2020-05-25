@@ -45,7 +45,7 @@ While the system is running, it records player's cash and owned properties in tx
 In the form of:
 
 Amount |  Balance
-------------- | -------------
+------------- | -------------                         
 Init | 1000
 -200 | 800 
 -200 | 600 
