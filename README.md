@@ -26,7 +26,7 @@ Run the MonopolyGame.java
 
 ### Features
 
-#### LuckCards: 
+#### 1. LuckCards: 
 The player will randomly draw 1 card from the card deck and if the card is:
 - JailExcemptionCard: The player doesn't need to move to the Jail square
 - PayJailFeeCard: The player pays $500 to exempt from Jail if it has sufficient money.
@@ -35,7 +35,7 @@ The player will randomly draw 1 card from the card deck and if the card is:
 **Design pattern: use Facade pattern, Singleton, Polymorphism to ensure low impact on the GotoJailSquare class.**
 
 
-#### Logging Player’s Assets: 
+#### 2. Logging Player’s Assets: 
 While the system is running, it records player's cash and owned properties in a txt file. 
 
 That is, every time the player successfully purchases a square, the logger should automatically rewrite the whole file.
