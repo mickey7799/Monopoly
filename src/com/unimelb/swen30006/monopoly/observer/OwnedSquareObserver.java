@@ -30,6 +30,7 @@ public class OwnedSquareObserver extends PlayerObserver{
 				for(Map.Entry<Object, Long> entry: counts.entrySet()) {
 	                outStream.write(entry.getKey()+" x "+entry.getValue()+"\n");
 	            }
+				outStream.close();
 			}catch(IOException e) {
 	            e.printStackTrace();
 	            System.exit(1);
