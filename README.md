@@ -52,11 +52,11 @@ Init | 1000
 -300 | 300 
 200| 500
 
- |  
+ .|  .
 ------------- 
-Lot x 1  |
-Utility x 2 |
-Railroad x 1 |
+Lot x 1  |.
+Utility x 2 |.
+Railroad x 1 |.
 
 That is, every time the player successfully purchases a square, the logger should automatically rewrite the files.
 
